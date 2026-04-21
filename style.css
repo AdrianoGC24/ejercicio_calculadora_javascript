@@ -34,6 +34,17 @@ body {
     font-weight: bold;
     text-align: right;
     border-radius: 0.5rem;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: .3rem;
+}
+
+.panel{
+    border-radius: .3rem;
+    background-color: #a85656;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .btn {
