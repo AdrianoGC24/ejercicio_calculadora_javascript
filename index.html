@@ -11,11 +11,14 @@
     <div class="calculadora">
 
         <div class="pantalla">
-            <p class="panel" id="numero1"></p>
-            <p class="panel" id="operacion"></p>
-            <p class="panel" id="numero2"></p>
-            <p class="panel">=</p>
-            <p class="panel" id="resultado"></p>
+
+            <div class="proceso">
+                <input type="text" id="numero1" readonly placeholder="0"></input>
+                <input type="text" id="operacion" readonly placeholder="?"></input>
+                <input type="text" id="numero2" readonly placeholder="0"></input>
+                <p class="igual">=</p>
+                <input type="text" id="resultado" readonly placeholder="="></input>
+            </div>
         </div>
         
         <button class="btn" id="c">C</button>
