@@ -8,21 +8,28 @@ let numero1 = ''
 let numero2 = ''
 let operacion = ''
 
-panelNumero1.textContent = numero1;
-panelOperacion.textContent = operacion;
-panelNumero2.textContent = numero2;
+panelNumero1.value = numero1;
+panelOperacion.value = operacion;
+panelNumero2.value = numero2;
+
+
 
 function actualizarPantalla () {
-    panelNumero1.textContent = numero1;
-    panelOperacion.textContent = operacion;
-    panelNumero2.textContent = numero2;
-    panelResultado.textContent = '';
+
+    panelNumero1.value = numero1;
+    panelOperacion.value = operacion;
+    panelNumero2.value = numero2;
+    panelResultado.value = '';
 }
+
+
 
 botones.forEach(boton => {
     boton.addEventListener('click', () => {
 
         const botonseleccionado = boton.textContent;
+
+
 
         if(boton.id === 'c') {
             numero1 = ''
@@ -32,17 +39,22 @@ botones.forEach(boton => {
             return;
         }
 
-        if (!isNaN(botonseleccionado)) {
+        if (!isNaN(botonseleccionado) || botonseleccionado === ".") {
 
-            if (operacion === '') {
-                numero1 += botonseleccionado;
-            } else {
-                numero2 += botonseleccionado;
-            }
+    if (operacion === '') {
 
-            actualizarPantalla();
-            return;
-            }
+        if (botonseleccionado === "." && numero1.includes(".")) return;
+        numero1 += botonseleccionado;
+
+        } else {
+
+        if (botonseleccionado === "." && numero2.includes(".")) return;
+        numero2 += botonseleccionado;
+        }
+
+        actualizarPantalla();
+        return;
+        }
 
         if (boton.id === 'borrar'){
             if (numero2 !== '') {
@@ -69,6 +81,18 @@ botones.forEach(boton => {
 
 
         if (boton.id === 'igual') {
+
+            const n1 = parseFloat(numero1);
+            const n2 = parseFloat(numero2);
+            let resultado = 0;
+
+            if (operacion === '+') resultado = n1 + n2;
+            if (operacion === '-') resultado = n1 - n2;
+            if (operacion === '*') resultado = n1 * n2;
+            if (operacion === '/') resultado = n2 !== 0 ? n1 / n2 : 'Error';
+
+            panelResultado.value = resultado;
+
             
         }
     })

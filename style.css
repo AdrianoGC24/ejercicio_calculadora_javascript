@@ -14,7 +14,6 @@ body {
 
 .calculadora {
     background-color: #ff4848;
-    color: aliceblue;
     width: 350px;
     max-width: 100%;
     padding: 1.5rem;
@@ -26,25 +25,42 @@ body {
 }
 
 .pantalla {
+
     grid-column: 1 / 5;
     background-color: #090c31;
-    padding: 1.5rem;
+    padding:  1.5rem;
     font-size: 2rem;
+    text-align: right;
+    border-radius: .5rem;
+    margin-bottom: 1.5rem;
     font-family: monospace;
     font-weight: bold;
-    text-align: right;
-    border-radius: 0.5rem;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: .3rem;
+
 }
 
-.panel{
-    border-radius: .3rem;
-    background-color: #a85656;
+.proceso {
+
     display: flex;
-    justify-content: center;
-    align-items: center;
+    gap: 5px;
+    background-color: transparent;
+
+}
+
+.proceso input {
+    width: 100%;
+    background: none;
+    border-radius: 20px;
+    color: rgb(21, 255, 0);
+    font-size: 1rem;
+    font-family: monospace;
+    text-align: center;
+
+}
+
+.igual{
+    justify-self: center;
+    font-size: 1.5rem;
+    color:rgb(21, 255, 0)
 }
 
 .btn {
