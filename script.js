@@ -44,12 +44,14 @@ botones.forEach(boton => {
     if (operacion === '') {
 
         if (botonseleccionado === "." && numero1.includes(".")) return;
-        numero1 += botonseleccionado;
+
+        numero1 += (botonseleccionado === "." && numero1 === "") ? "0." : botonseleccionado;
 
         } else {
 
         if (botonseleccionado === "." && numero2.includes(".")) return;
-        numero2 += botonseleccionado;
+        
+        numero2 += (botonseleccionado === "." && numero2 === "") ? "0." : botonseleccionado;
         }
 
         actualizarPantalla();
