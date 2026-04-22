@@ -7,11 +7,29 @@
 
 body {
     min-height: 100vh;
-    background-color: #e1feff;
+    background-color: #ffe1e1;
     display: grid;
     place-items: center;
 }
+.titulo {
+    margin: 0 2rem;
+    display: grid;
+    border: 5px solid #7f1d1d;
+    border-radius: 2rem;
+    padding: 1.5rem;
+}
+.titulo h1 {
+    margin-bottom: 10px;
+    text-align: center;
+    font-family: monospace;
+    font-size: bold;
+    color: #7f1d1d;
+}
 
+.titulo p {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
 .calculadora {
     background-color: #b91c1c; 
     border: 5px solid #7f1d1d; 
@@ -53,7 +71,7 @@ body {
     background: none;
     border-radius: 20px;
     color: #22c55e;
-    font-size: 1rem;
+    font-size: 1.4rem;
     font-family: monospace;
     text-align: center;
 
@@ -66,6 +84,7 @@ body {
 }
 
 .btn {
+    cursor: pointer;
     background-color: #fecaca; 
     color: #7f1d1d; 
     border-radius: .5rem;

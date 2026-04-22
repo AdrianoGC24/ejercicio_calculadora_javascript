@@ -28,7 +28,7 @@ botones.forEach(boton => {
     boton.addEventListener('click', () => {
 
         const botonseleccionado = boton.textContent;
-
+        
 
 
         if(boton.id === 'c') {
